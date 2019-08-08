@@ -17,7 +17,7 @@ public class SyncProducer {
         for (int i = 0; i < 3; i++) {
             try {
                 Message msg = new Message("async_bbb_topic", "TagA", ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
-                SendResult sendResult = producer.send(msg, 10000);
+                SendResult sendResult = producer.send(msg);
                 System.out.printf("%s%n", sendResult);
             }catch (Exception e){
                 e.printStackTrace();

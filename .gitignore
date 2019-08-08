@@ -33,3 +33,4 @@ learn-rocketmq.iml
 src/test/
 target/generated-sources/
 /target/
+/.idea/

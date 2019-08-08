@@ -38,7 +38,7 @@ public class TagFilterProducer {
                 tags[i % tags.length],
                 "Hello world".getBytes(RemotingHelper.DEFAULT_CHARSET));
 
-            SendResult sendResult = producer.send(msg, 7000);
+            SendResult sendResult = producer.send(msg, 10000);
             System.out.printf("%s%n", sendResult);
         }
 

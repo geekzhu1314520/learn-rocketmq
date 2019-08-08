@@ -17,7 +17,6 @@ public class OnewayProducer {
         for (int i = 0; i < 3; i++) {
             try {
                 Message msg = new Message("async_bbb_topic", "TagA", ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
-                producer.setSendMsgTimeout(6000);
                 producer.sendOneway(msg);
             }catch (Exception e){
                 e.printStackTrace();

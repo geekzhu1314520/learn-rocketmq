@@ -41,14 +41,14 @@ public class ASyncProducer {
                         System.out.printf("%-10d Exception %s %n", index, e);
                         e.printStackTrace();
                     }
-                }, 10000);
+                });
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
         latch.await(50, TimeUnit.SECONDS);
-//        producer.shutdown();
+        producer.shutdown();
     }
 
 }
